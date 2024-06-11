@@ -1,0 +1,63 @@
+@use 'variables';
+
+.hero {
+    margin-bottom: 35px;
+    
+    &__layout {
+        margin-top: 54px;
+        display: block;
+        align-items: center;
+
+        &__text {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+            p {
+                margin-bottom: 35px;
+            }
+
+        }
+
+        &__date {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 45px;
+
+            table {
+                margin: 0 auto;
+            } 
+
+            &__nome {
+                font-size: 28px;
+                background-color: variables.$corFundoData;
+                border-radius: 20px;
+                padding: 5px;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+    
+    }
+}
+
+@media(max-width:640px) {
+    .hero{
+        &__layout {
+            margin-top: 34px;
+            &__text {
+                font-size: 24px;
+            }
+            &__date {
+                font-size: 32px;
+                &__nome {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+

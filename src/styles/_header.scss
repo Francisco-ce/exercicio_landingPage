@@ -1,0 +1,27 @@
+@use 'variables';
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 165px;
+    background-image: linear-gradient(variables.$corHeader1, variables.$corHeader2);
+    
+    &__image {    
+        height: 135px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media(max-width: 640px) {
+    .header {
+        height: 140px;
+
+        &__image {
+            height: 80px;
+            margin-top: 55px;
+            margin-bottom: 5px;
+        }
+    }
+    }

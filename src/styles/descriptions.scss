@@ -1,0 +1,59 @@
+@use 'variables';
+
+.descriptions {
+
+    &__content {
+
+        padding: 20px;
+        font-size: 32px;
+        color: variables.$corFundoDescriptions;
+        letter-spacing: 4px;
+
+        .container {
+            gap:80px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &--gradient1 {
+            background-image: linear-gradient(variables.$description1, variables.$description2);
+        }
+
+        &--gradient2 {
+            background-image: linear-gradient(variables.$description2, variables.$description3);
+        }
+
+        &--gradient3 {
+            background-image: linear-gradient(variables.$description3, variables.$description1);
+        }
+
+        
+        img {
+            height: 200px ;
+        }
+        
+    &--invert-left {
+        .container{
+            flex-direction: row-reverse;
+        }   
+    }
+
+    }
+
+}
+
+@media(max-width:640px) {
+    .descriptions {
+        &__content {
+            font-size: 14px;
+            letter-spacing: 2px;
+            .container {
+                gap:10px;
+            }
+
+            img {
+                height: 80px ;
+            }
+        }
+    }
+}
